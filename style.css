@@ -1,0 +1,32 @@
+/*
+ Theme Name:   Blankslate Child
+ Theme URI:    http://example.com/twenty-fifteen-child/
+ Description:  Blankslate Child Theme
+ Author:       PAYET Lucas
+ Author URI:   http://example.com
+ Template:     blankslate
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  blankslate
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+
+*{
+    outline: 1px solid red;
+    font-family: Syne;
+    color: black;
+}
+
+#footer{
+    display: flex;
+    justify-content: center;
+}
+
+
+#footer a{
+    text-decoration: none;
+    color: inherit;
+}
