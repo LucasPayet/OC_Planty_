@@ -15,7 +15,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
 
 *{
-    outline: 1px solid red;
+    outline: 1px solid blue;
     font-family: Syne;
     color: black;
 }
