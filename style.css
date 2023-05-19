@@ -15,18 +15,153 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
 
 *{
-    outline: 1px solid blue;
+    /* outline: 1px solid blue; */
     font-family: Syne;
     color: black;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background: #ffffff;
+    margin: 0;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo a img{
+    height: 19px;
+}
+
+#logo{
+    margin-left: 37px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    /* right: 0; */
+    display: flex;
+    justify-content: center;
+    margin-right: 60px;
+}
+
+.menu a{
+    display: flex;
+    height: 80px;
+    align-items: center;
+}
+
+.menu li:last-child{
+    width: 236px;
+    background: #DC9F96;
+    margin: 0;
+}
+
+.menu li:last-child a{
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.menu span{
+    color: inherit;
+}
+
+.form_1{
+   font-size: 20px;
+   font-weight: 400;
+}
+
+.form_1 input, .form_1 textarea{
+    border: none;
+    width: 100%;
+    min-height: 71px;
+    border-radius: 7px;
+    resize: none;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.submitBut{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.submitBut input{
+    width: 198px;
+    height: 55px;
+    background: #E0B9B4;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.submitBut span{
+    margin-top: 1px;
+    background: transparent;
+    border: 1px solid #E0B9B4;
+}
+
+.submitBut span::before{
+    background: #E0B9B4;
+}
+
+.wpcf7-response-output{
+    display: none;
 }
 
 #footer{
+    height: 60px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-
 #footer a{
-    text-decoration: none;
+    
     color: inherit;
+}
+
+@media screen and (max-width: 900px){
+    header{
+        flex-direction: column;
+    }
+
+    #logo{
+        margin: 5px 0 0 0;
+    }
+
+    .menu{
+        width: 100vw;
+        justify-content: space-around;
+    }
+
+    .menu a{
+        height: 50px;
+    }
+
+    .menu li{
+        margin: 0;
+    }
+
+    .menu li:last-child{
+        width: auto;
+        background-color: transparent;
+    }
+    .menu li:last-child a{
+        color: black;
+        font-weight: 400;
+    }
 }
