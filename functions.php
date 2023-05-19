@@ -35,13 +35,11 @@ function montheme_customize_register($wp_customize)
 add_action('customize_register', 'montheme_customize_register');
 
 function add_custom_menu_item( $items, $args ) {
-    if ( is_user_logged_in() ) {
-        $NewItems = '<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="http://localhost/Projet6/wp-admin"> <span>Admin</span> </a></li>';
-        $items .= $NewItems;
+    if ( is_user_logged_in() && $args->theme_location == 'main-menu') {
+        $new_items = '<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="http://localhost/Projet6/wp-admin"> <span>Admin</span> </a></li>';
+        $items = $new_items . $items;
     }
     return $items;
 }
 
-apply_filters( 'wp_nav_menu_items', $items, $args);
-// $menu_items = 
-// echo $menu_items;
+add_filter( 'wp_nav_menu_items', 'add_custom_menu_item', 10, 2 );
