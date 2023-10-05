@@ -36,7 +36,7 @@ add_action('customize_register', 'montheme_customize_register');
 
 function add_custom_menu_item( $items, $args ) {
     if ( is_user_logged_in() && $args->theme_location == 'main-menu') {
-        $new_items = '<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="http://localhost/Projet6/wp-admin"> <span>Admin</span> </a></li>';
+        $new_items = '<li id="menu-item-100" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-100"><a href="http://localhost/Projet6/wp-admin"> <span>Admin</span> </a></li>';
         $items = $new_items . $items;
     }
     return $items;
